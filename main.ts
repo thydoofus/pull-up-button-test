@@ -1,3 +1,9 @@
+input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Yes)
+    control.waitMicros(200)
+    basic.showIcon(IconNames.Heart)
+    keyboard.sendSimultaneousKeys("" + keyboard.modifiers(keyboard._Modifier.control) + "v", false)
+})
 keyboard.startKeyboardService()
 let switch_state = 0
 pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
