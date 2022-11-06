@@ -5,12 +5,12 @@ input.onButtonPressed(Button.A, function () {
     keyboard.sendSimultaneousKeys(" ", false)
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showIcon(IconNames.Yes)
+    basic.showIcon(IconNames.Surprised)
     control.waitMicros(200)
     basic.showIcon(IconNames.Heart)
     keyboard.sendSimultaneousKeys(keyboard.modifiers(keyboard._Modifier.shift), false)
 })
-keyboard.startKeyboardService()
+mouse.startMouseService()
 let switch_state = 0
 pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
 basic.showIcon(IconNames.Heart)
@@ -19,6 +19,6 @@ basic.forever(function () {
         basic.showIcon(IconNames.Happy)
         control.waitMicros(200)
         basic.showIcon(IconNames.Heart)
-        keyboard.sendSimultaneousKeys(" ", false)
+        mouse.click()
     }
 })
