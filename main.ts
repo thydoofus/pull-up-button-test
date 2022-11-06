@@ -2,13 +2,12 @@ input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Yes)
     control.waitMicros(200)
     basic.showIcon(IconNames.Heart)
-    keyboard.sendSimultaneousKeys(" ", false)
+    mouse.click()
 })
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Surprised)
     control.waitMicros(200)
     basic.showIcon(IconNames.Heart)
-    keyboard.sendSimultaneousKeys(keyboard.modifiers(keyboard._Modifier.shift), false)
 })
 mouse.startMouseService()
 let switch_state = 0
