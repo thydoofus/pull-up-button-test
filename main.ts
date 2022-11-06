@@ -2,7 +2,13 @@ input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Yes)
     control.waitMicros(200)
     basic.showIcon(IconNames.Heart)
-    keyboard.sendSimultaneousKeys("" + keyboard.modifiers(keyboard._Modifier.control) + "v", false)
+    keyboard.sendSimultaneousKeys(" ", false)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.Yes)
+    control.waitMicros(200)
+    basic.showIcon(IconNames.Heart)
+    keyboard.sendSimultaneousKeys(keyboard.modifiers(keyboard._Modifier.shift), false)
 })
 keyboard.startKeyboardService()
 let switch_state = 0
@@ -13,6 +19,6 @@ basic.forever(function () {
         basic.showIcon(IconNames.Happy)
         control.waitMicros(200)
         basic.showIcon(IconNames.Heart)
-        keyboard.sendSimultaneousKeys("" + keyboard.modifiers(keyboard._Modifier.control) + "v", false)
+        keyboard.sendSimultaneousKeys(" ", false)
     }
 })
